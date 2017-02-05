@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html >
+<head>
+  <meta charset="UTF-8">
+  <title>Garbage-weather</title>
+  
+  
+  
+      <link rel="stylesheet" href="css/style.css">
+
+  
+</head>
+
+<body>
+  
+<div class="daybox">
+  <label>
+    <input type="checkbox" id="switch_night"/>
+    <div class="top">
+      <div class="quote"></div>
+      <div class="moon">
+        <div class="dot dot1"></div>
+        <div class="dot dot2"></div>
+        <div class="dot dot3"></div>
+      </div>
+      <div class="cloud">
+        <div class="rain"></div>
+        <div class="rain rain2"></div>
+        <div class="rain rain3"></div>
+      </div>
+      <div class="window">
+        <div class="high">High</div>
+        <div class="low">Low</div>
+        <div class="info">
+          <div class="city">台北市</div>
+          <div class="date">請點選下方</div>
+        </div>
+      </div>
+      <div class="close">X</div>
+    </div>
+    <div class="bottom">
+      <div class="dayweather d5">
+        <div class="temp">
+          <h3 class="day">五</h3>
+          <h4>17~23</h4>
+        </div>
+        <svg viewbox="-63 -30 100 100">
+          <circle class="cloud cloud_bad" cx="0" cy="30" r="20"></circle>
+          <circle class="cloud cloud_bad" cx="-7" cy="30" r="20"></circle>
+          <circle class="cloud cloud_bad" cx="-14" cy="30" r="20"></circle>
+          <circle class="cloud cloud_bad" cx="-22" cy="30" r="20"></circle>
+          <circle class="cloud cloud_bad" cx="-30" cy="30" r="20"></circle>
+          <circle class="cloud cloud_bad" cx="-24" cy="8" r="15"></circle>
+          <circle class="cloud cloud_bad" cx="-7" cy="10" r="10"></circle>
+          <rect class="drop" x="0" y="30" width="5" height="15" fill="blue"></rect>
+          <rect class="drop" x="0" y="50" width="5" height="15" fill="blue"></rect>
+          <rect class="drop" x="-20" y="40" width="5" height="15" fill="blue"></rect>
+          <rect class="drop" x="-20" y="60" width="5" height="15" fill="blue"></rect>
+          <rect class="drop" x="-40" y="30" width="5" height="15" fill="blue"></rect>
+          <rect class="drop" x="-40" y="50" width="5" height="15" fill="blue"></rect>
+        </svg>
+      </div>
+      <div class="dayweather d6">
+        <div class="temp">
+          <h3 class="day">六</h3>
+          <h4>16~24</h4>
+        </div>
+        <svg viewbox="-65 -30 100 100">
+          <circle class="sun" cx="0" cy="0" r="22"></circle>
+          <circle class="cloud" cx="0" cy="30" r="20"></circle>
+          <circle class="cloud" cx="-7" cy="30" r="20"></circle>
+          <circle class="cloud" cx="-14" cy="30" r="20"></circle>
+          <circle class="cloud" cx="-22" cy="30" r="20"></circle>
+          <circle class="cloud" cx="-30" cy="30" r="20"></circle>
+          <circle class="cloud" cx="-24" cy="8" r="15"></circle>
+          <circle class="cloud" cx="-7" cy="10" r="10"></circle>
+        </svg>
+      </div>
+      <div class="dayweather d7">
+        <div class="temp">
+          <h3 class="day">日</h3>
+          <h4>16~22</h4>
+        </div>
+        <svg viewbox="-65 -30 100 100">
+          <circle class="cloud cloud_bad" cx="0" cy="30" r="20"></circle>
+          <circle class="cloud cloud_bad" cx="-7" cy="30" r="20"></circle>
+          <circle class="cloud cloud_bad" cx="-14" cy="30" r="20"></circle>
+          <circle class="cloud cloud_bad" cx="-22" cy="30" r="20"></circle>
+          <circle class="cloud cloud_bad" cx="-30" cy="30" r="20"></circle>
+          <circle class="cloud cloud_bad" cx="-24" cy="8" r="15"></circle>
+          <circle class="cloud cloud_bad" cx="-7" cy="10" r="10"></circle>
+          <rect class="drop" x="0" y="30" width="5" height="15" fill="blue"></rect>
+          <rect class="drop" x="0" y="50" width="5" height="15" fill="blue"></rect>
+          <rect class="drop" x="-20" y="40" width="5" height="15" fill="blue"></rect>
+          <rect class="drop" x="-20" y="60" width="5" height="15" fill="blue"></rect>
+          <rect class="drop" x="-40" y="30" width="5" height="15" fill="blue"></rect>
+          <rect class="drop" x="-40" y="50" width="5" height="15" fill="blue"></rect>
+        </svg>
+      </div>
+      <div class="dayweather d1">
+        <div class="temp">
+          <h3 class="day">一</h3>
+          <h4>14~18</h4>
+        </div>
+        <svg viewbox="-65 -30 100 100">
+          <circle class="cloud cloud_soso" cx="0" cy="30" r="20"></circle>
+          <circle class="cloud cloud_soso" cx="-7" cy="30" r="20"></circle>
+          <circle class="cloud cloud_soso" cx="-14" cy="30" r="20"></circle>
+          <circle class="cloud cloud_soso" cx="-22" cy="30" r="20"></circle>
+          <circle class="cloud cloud_soso" cx="-30" cy="30" r="20"></circle>
+          <circle class="cloud cloud_soso" cx="-24" cy="8" r="15"></circle>
+          <circle class="cloud cloud_soso" cx="-7" cy="10" r="10"></circle>
+        </svg>
+      </div>
+      <div class="dayweather d2">
+        <div class="temp">
+          <h3 class="day">二</h3>
+          <h4>14~19</h4>
+        </div>
+        <svg viewbox="-65 -30 100 100">
+          <circle class="sun" cx="0" cy="0" r="22"></circle>
+          <circle class="cloud" cx="0" cy="30" r="20"></circle>
+          <circle class="cloud" cx="-7" cy="30" r="20"></circle>
+          <circle class="cloud" cx="-14" cy="30" r="20"></circle>
+          <circle class="cloud" cx="-22" cy="30" r="20"></circle>
+          <circle class="cloud" cx="-30" cy="30" r="20"></circle>
+          <circle class="cloud" cx="-24" cy="8" r="15"></circle>
+          <circle class="cloud" cx="-7" cy="10" r="10"></circle>
+        </svg>
+      </div>
+      <div class="dayweather d3">
+        <div class="temp">
+          <h3 class="day">三</h3>
+          <h4>13~23</h4>
+        </div>
+        <svg viewbox="-65 -30 100 100">
+          <circle class="sun" cx="0" cy="0" r="22"></circle>
+          <circle class="cloud" cx="0" cy="30" r="20"></circle>
+          <circle class="cloud" cx="-15" cy="30" r="20"></circle>
+          <circle class="cloud" cx="-30" cy="30" r="20"></circle>
+          <circle class="cloud" cx="-25" cy="10" r="15"></circle>
+          <circle class="cloud" cx="-7" cy="15" r="15"></circle>
+        </svg>
+      </div>
+      <div class="dayweather d4">
+        <div class="temp">
+          <h3 class="day">四</h3>
+          <h4>9~13</h4>
+        </div>
+        <svg viewbox="-65 -30 100 100"> 
+          <circle class="cloud cloud_cold" cx="0" cy="30" r="20"></circle>
+          <circle class="cloud cloud_cold" cx="-7" cy="30" r="20"></circle>
+          <circle class="cloud cloud_cold" cx="-14" cy="30" r="20"></circle>
+          <circle class="cloud cloud_cold" cx="-22" cy="30" r="20"></circle>
+          <circle class="cloud cloud_cold" cx="-30" cy="30" r="20"></circle>
+          <circle class="cloud cloud_cold" cx="-24" cy="8" r="15"></circle>
+          <circle class="cloud cloud_cold" cx="-7" cy="10" r="10"></circle>
+          <rect class="drop" x="0" y="30" width="5" height="15" fill="blue"></rect>
+          <rect class="drop" x="0" y="50" width="5" height="15" fill="blue"></rect>
+          <rect class="drop" x="-20" y="40" width="5" height="15" fill="blue"></rect>
+          <rect class="drop" x="-20" y="60" width="5" height="15" fill="blue"></rect>
+          <rect class="drop" x="-40" y="30" width="5" height="15" fill="blue"></rect>
+          <rect class="drop" x="-40" y="50" width="5" height="15" fill="blue"></rect>
+        </svg>
+      </div>
+    </div>
+  </label>
+</div>
+<div class="copyright">範例來自 墨雨設計／天氣資料 Google Weather</div>
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.0/jquery.min.js'></script>
+
+    <script src="js/index.js"></script>
+
+</body>
+</html>

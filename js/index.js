@@ -1,0 +1,119 @@
+$(".dayweather").click(
+  function(){
+    $(".close").css("display","none");
+  }
+)
+
+$(".d5").click(
+  function(){
+    $(".quote").text("啊啊啊要放惹");
+    $(".rain").css("display","block");
+    $(".moon").css("display","none");
+    $(".high").text("23℃");
+    $(".low").text("17℃");
+    $(".date").text("2017/2/3 五");
+    $(".cloud").addClass("special");
+    $(".cloud").css("background-color","#cecbc6");
+    $(".quote").css("margin-top","10px");
+    $(".quote").css("text-align","center");
+    $(".top").addClass("nogood");
+    $(".top").removeClass("cold");
+  }
+)
+$(".d6").click(
+  function(){
+    $(".moon").css("display","inline-block");
+    $(".quote").text("該出去玩囉......跟自己");
+    $(".rain").css("display","none");
+    $(".high").text("24℃");
+    $(".low").text("16℃");
+    $(".date").text("2017/2/4 六");
+    $(".cloud").css("background-color","white");
+    $(".cloud").removeClass("special");
+    $(".top").removeClass("nogood");
+    $(".quote").css("margin-top","10px");
+    $(".quote").css("text-align","center");
+    $(".top").removeClass("cold");
+  }
+)
+$(".d7").click(
+  function(){
+     $(".quote").text("快上班囉廠廠");
+    $(".rain").css("display","block");
+    $(".moon").css("display","none");
+    $(".high").text("22℃");
+    $(".low").text("16℃");
+    $(".date").text("2017/2/3 五");
+    $(".cloud").addClass("special");
+    $(".cloud").css("background-color","#cecbc6");
+    $(".quote").css("margin-top","10px");
+    $(".quote").css("text-align","center");
+    $(".top").addClass("nogood");
+    $(".top").removeClass("cold");
+  }
+)
+$(".d1").click(
+  function(){
+    $(".quote").text("了不起。負責");
+    $(".rain").css("display","none");
+    $(".moon").css("display","none");
+    $(".high").text("18℃");
+    $(".low").text("14℃");
+    $(".date").text("2017/2/6 一");
+    $(".cloud").css("background-color","#c5dbcf");
+    $(".cloud").removeClass("special");
+    $(".top").removeClass("nogood");
+    $(".quote").css("margin-top","10px");
+    $(".quote").css("text-align","center");
+    $(".top").removeClass("cold");
+  }
+)
+$(".d2").click(
+  function(){
+    $(".quote").text("白雲白，藍天藍，廢話線出來玩囉");
+    $(".rain").css("display","none");
+    $(".moon").css("display","inline-block");
+    $(".high").text("19℃");
+    $(".low").text("14℃");
+    $(".date").text("2017/2/7 二");
+    $(".cloud").css("background-color","white");
+    $(".cloud").removeClass("special");
+    $(".top").removeClass("nogood");
+    $(".quote").css("margin-top","10px");
+    $(".quote").css("text-align","center");
+    $(".top").removeClass("cold");
+  }
+)
+$(".d3").click(
+  function(){
+    $(".quote").text("寒流要來了，就跟你的人生一樣");
+    $(".rain").css("display","none");
+    $(".moon").css("display","inline-block");
+    $(".high").text("23℃");
+    $(".low").text("13℃");
+    $(".date").text("2017/2/8 三");
+    $(".cloud").css("background-color","white");
+    $(".cloud").removeClass("special");
+    $(".top").removeClass("nogood");
+    $(".quote").css("margin-top","10px");
+    $(".quote").css("text-align","center");
+    $(".top").removeClass("cold");
+  }
+)
+$(".d4").click(
+  function(){
+    $(".top").removeClass("nogood");
+    $(".top").addClass("cold");
+    $(".quote").text("不哭不哭，眼淚是珍珠(寒流來惹)");
+    $(".quote").css("margin-top","10px");
+    $(".quote").css("text-align","center");
+    $(".rain").css("display","block");
+    $(".moon").css("display","none");
+    $(".high").text("13℃");
+    $(".low").text("9℃");
+    $(".date").text("2017/2/9 四");
+    $(".cloud").addClass("special");
+    $(".cloud").css("background-color","#9fc2f9");
+
+  }
+)

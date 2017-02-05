@@ -1,0 +1,344 @@
+@import url('https://fonts.googleapis.com/css?family=Lato')
+
+$white: #f3f3f3
+$yellow: #f2c635
+$black: #222
+$blue_light: #1dbee2
+$blue_dark: #164187
+$teal: #1de2bb
+$rain: #4dacff
+$cloud: #f2f9fe
+$cloud_grey: #b8ccd8
+$cloud_dark: #8b9da8
+$cloud_cold: #1783c6
+$cloud_soso: #a9c6c6
+$sky_bottom: #77d8e5
+$sky_top: #45f9db
+$warm_rain: #4db7f9
+$cold_rain: #9db6c6
+
+*
+  // view
+  // border: solid 1px black
+  position: relative
+  font-family: "Lato","微軟正黑體"
+
+@mixin size($w,$h)
+  width: $w
+  height: $h
+
+html,body
+  display: flex
+  justify-content: center
+  vertical-align: middle
+  align-items: center
+  width:  100%
+  height: 100%
+  padding: 0
+  margin: 0
+  background: linear-gradient(0deg,$blue_light,$blue_dark)
+  background-size: 100% 100%
+  animation: daylight 5s infinite
+  
+  @keyframes daylight
+    0%
+      background-position: 100% 100%
+    40%
+      background-position: 100% 300%
+    60%
+      background-position: 100% 300%
+    100%
+      background-position: 100% 100%
+.daybox
+  width: 50%
+  max-width: 400px
+  min-width: 270px
+  background-color: $white
+  box-shadow: 0px 0px 20px regb(black,0.3)
+  border-radius: 5px
+  cursor: pointer
+
+  &:hover
+    .bottom
+      height: 100px
+    .dayweather
+      top: 17px
+      opacity: 1
+  .moon
+    +size(50px,50px)
+    background-color: #ed880e
+    position: absolute
+    border: none
+    border-radius: 100%
+    box-shadow: 0px 5px $yellow
+    left: -10%
+    top: 55%
+    animation: moonfloat 3s infinite
+    .dot
+      +size(10px,10px)
+      content: ""
+      display: block
+      border: none
+      border-radius: 100%
+      background-color: $white
+      position: absolute
+    .dot1
+      left: 10px
+      top: 9px
+    .dot2
+      left: 20px
+      top: 19px
+    .dot3
+      left: 30px
+      top: 29px
+    
+  @keyframes moonfloat
+    0%
+      transform: translateX(0px) translateY(0px)
+    10%
+      transform: translateX(50px) translateY(-30px)
+    20%
+      transform: translateX(100px) translateY(-50px)
+    30%
+      transform: translateX(150px) translateY(-70px)
+      background-color: #ed880e
+    40%
+      transform: translateX(175px) translateY(-70px)
+    50% 
+      transform: translateX(175px) translateY(-50px)
+      background-color: blue
+    60% 
+      transform: translateX(175px) translateY(-70px)
+    70% 
+      transform: translateX(200px) translateY(-70px)
+      background-color: #ed880e
+    80% 
+      transform: translateX(250px) translateY(-50px)
+    90% 
+      transform: translateX(300px) translateY(-30px)
+    100% 
+      transform: translateX(380px) translateY(0px)
+      // box-shadow: -30px 30px $yellow
+label
+  cursor: pointer  
+.top
+  height: 180px
+  overflow: hidden
+  background: linear-gradient(0deg,$sky_bottom,$sky_top)
+  background-size: 100% 100%
+  animation: daylight 10s infinite
+  border-radius: 5px 5px 0px 0px
+.nogood
+  background: linear-gradient(0deg,$sky_bottom,$warm_rain)
+.cold
+  background: linear-gradient(0deg,$warm_rain,$cold_rain)
+  
+  @keyframes daylight
+    0%
+      background-position: 100% 100%
+    40%
+      background-position: 100% 200%
+    60%
+      background-position: 100% 200%
+    100%
+      background-position: 100% 100%
+  
+.quote
+  margin-top: 10px
+  text-align: center
+  font-size: 11px
+.drop
+  animation: clouddrift 2s infinite
+.cloud
+  +size(70px,30px)
+  position: absolute
+  left: 40%
+  bottom: 50px
+  border-radius: 20px
+  background-color: $cloud
+  box-shadow: 0px 0px 10px rgba(black,0.3)
+  animation: clouddrift 2s infinite
+  .change
+    background-color: $cloud_grey
+  &:before,&:after
+    +size(30px,30px)
+    content: ""
+    display: block
+    // border: solid 1px
+    border-radius: 100%
+    background-color: $cloud
+    box-shadow: 0px 0px 10px rgba(black,0.2)
+    position: absolute
+  &.special:before,&.special:after
+    background-color: $cloud_grey
+  &:before
+    left: 14px
+    top: -25px
+  &:after
+    left: 30px
+    top: -14px
+  
+  @keyframes clouddrift
+    0% 
+      transform: translateY(0px)
+    50% 
+      transform: translateY(-5px)
+    100% 
+      transform: translateY(0px)
+.rain
+  +size(2px,10px)
+  position: absolute
+  left: 35px
+  bottom: 5px
+  animation: raindrop 1s infinite linear
+  background-color: blue
+  border: none
+.rain2
+  left: 50px
+  bottom: 10px
+  animation-delay: -0.4s
+.rain3
+  left: 20px
+  bottom: 10px
+  animation-delay: -0.7s
+  
+@keyframes raindrop
+  0%
+    transform: translateY(0px)
+  100%
+    transform: translateY(50px)
+    opacity: 0
+  
+.window
+  display: flex
+  position: absolute
+  padding-margin: 30px
+  bottom: 5%
+  left: 30%
+  // color: $white
+  .high
+    color: rgba(black,1)
+    font-weight: 1000
+  .low
+    color: rgba(black,0.3)
+    font-weight: 100
+  .high,.low 
+    font-size: 18px
+    margin: 5px
+    margin-top: 10px
+    
+  .info
+    color: rgba(black,0.7)
+    font-size: 10px
+    margin: 5px
+.close
+  display: absolute
+  top: -2%
+  left: 94%
+  +size(15px,15px)
+  border-radius: 5px
+  line-height: 15px
+  background-color: red
+  font-size: 8px
+  color: white
+  text-align: center
+  padding-top: 0px
+   
+.bottom
+  height: 40px
+  display: flex
+  justify-content: center
+  box-shadow: 0px 0px 20px rgba(black,0.3)
+  border-radius: 0px 0px 5px 5px
+  overflow: hidden
+  transition-duration: 0.8s
+  
+  // display: grid
+  // grid-template-columns: 5px 1fr 1fr 1fr 1fr 1fr 1fr 1fr 5px
+  // grid-template-rows: 100px 
+  // grid-template-areas:  ". main main2 main main2 main main2 main ."
+  .dayweather 
+    // grid-area: main 
+    // grid-area: main2
+    width: calc( 100% / 7 - 3px)
+    display: inline-block
+    text-align: center
+    top: 12px
+    opacity: 0.3
+    transition: 0.5s
+    
+    h3
+      font-size: 8px
+      color: rgba($black,0.6)
+      font-weight: 400
+      padding-bottom: 5px
+      letter-spacing: 1px
+      margin: 0px
+    h4
+      font-size: 7px
+      color: rgba($black,0.8)
+      font-weight: 400
+      letter-spacing: 0px
+      margin: 0px
+    svg
+      margin-top: 7px
+      width: 100%
+      max-width: 40px
+      height: 40px
+      .sun
+        fill: $yellow
+        stroke: rgba($yellow,0.5)
+        stroke-width: 12px
+        stroke-dasharray: 2px
+      .rain
+        stroke: $rain
+      .cloud
+        fill: $cloud_grey
+      .cloud_soso
+        fill: $cloud_soso
+      .cloud_bad
+        fill: $cloud_dark
+      .cloud_cold
+        fill: $cloud_cold
+.dayweather:nth-child(1)
+  transition-delay: 0.2s
+.dayweather:nth-child(2)
+  transition-delay: 0.4s
+.dayweather:nth-child(3)
+  transition-delay: 0.6s
+.dayweather:nth-child(4)
+  transition-delay: 0.8s
+.dayweather:nth-child(5)
+  transition-delay: 1s
+.dayweather:nth-child(6)
+  transition-delay: 1.2s
+.dayweather:nth-child(7)
+  transition-delay: 1.4s
+
+.moon, .cloud
+  transition: 0.5s 0.1s
+#switch_night
+  display: none
+#switch_night:checked+.top
+  .close
+    background-color: #33e05e
+  .moon
+    display: none
+  #switch_night
+    display: none
+  
+@media screen and(max-width: 800px)
+  .daybox
+    width: 80%
+    
+@media screen and(max-width: 400px)
+  .daybox
+    width: 100%
+.copyright
+  display: absolute
+  position: fixed
+  font-size: 8px
+  bottom: 3%
+  left: 40%
+
+
